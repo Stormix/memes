@@ -17,7 +17,7 @@ app.get('/send/memes', async (req, res) => {
     const memes = await fsPromises.readdir(path);
     if (memes.length > 0) {
       const randomMeme = memes[Math.floor(Math.random() * memes.length)];
-      res.set('Cache-Control', 'no-store');
+      res.set('Cache-Control', 'no-cache');
       res.sendFile(randomMeme, {
         root: `${__dirname}/../media/`,
       });

@@ -4,7 +4,7 @@ import * as fs from 'fs';
 
 const app = express();
 const port = process.env.PORT || 6969;
-const path = 'media';
+const path = 'memes';
 
 app.set('etag', false);
 
@@ -19,7 +19,7 @@ app.get('/send/memes', async (req, res) => {
       const randomMeme = memes[Math.floor(Math.random() * memes.length)];
       res.set('Cache-Control', 'no-cache');
       res.sendFile(randomMeme, {
-        root: `${__dirname}/../media/`,
+        root: `${__dirname}/../${path}/`,
       });
     }
   } catch (e) {

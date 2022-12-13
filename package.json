@@ -16,7 +16,7 @@
   "author": "Anas Mazouni <madadj4@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.23.3"
   },
   "devDependencies": {
